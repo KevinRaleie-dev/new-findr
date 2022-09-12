@@ -19,7 +19,7 @@ export const Nav: React.FunctionComponent = () => {
                     </Link>
                 </div>
                 <div className='p-2 border rounded-md'>
-                    <Link href="#">
+                    <Link href="https://github.com/KevinRaleie-dev/new-findr">
                         <FiGithub />
                     </Link>
                 </div>

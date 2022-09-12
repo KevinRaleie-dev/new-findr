@@ -15,13 +15,13 @@ const Home: NextPage = () => {
       </header>
       <main>
         <div className='px-5 mt-10 space-y-5'>
-          <p className=" text-purple-900 text-3xl font-bold text-left">
+          <p className=" text-blue-900 text-3xl font-bold text-left">
             Let Us Help You Find The Perfect <span className='text-[#66ceca]'>Bursary For You</span>
           </p>
-          <p className='text-lg text-[#66ceca] font-medium'>
+          <p className='text-lg text-blue-900 font-medium'>
             All new look and feel with new features allowing you to share links, save bursaries and directly apply to bursars without the middleman.
           </p>
-          <p className="text-lg text-[#66ceca] font-medium">
+          <p className="text-lg text-blue-900 font-medium">
             Click on any of the months on the month slider below to filter and search for bursaries
           </p>
         </div>
