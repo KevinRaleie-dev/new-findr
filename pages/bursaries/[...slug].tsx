@@ -39,7 +39,7 @@ const Bursary = ({ slug }: BursaryProps) => {
 
     const shareHandler = async () => {
         await navigator.share({
-            url: `https://bursary-findr.vercel.com${router.asPath}`,
+            url: `https://bursary-findr.vercel.app${router.asPath}`,
             title: data?.title,
             text: `Find bursaries closing in the month of ${slug}`
         })
