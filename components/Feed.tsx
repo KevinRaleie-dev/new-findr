@@ -1,9 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 
-import dynamic from 'next/dynamic'
-
-const DynamicCard = dynamic(() => import("./Card"), { ssr: false })
+import Card from './Card'
 
 type FeedProps = {
     data: any
@@ -25,12 +23,12 @@ export const Feed: React.FunctionComponent<FeedProps> = ({
                         </h2>
                     </div>
                     {/* this is going to be mapped over */}
-                    <div className='mt-5 flex flex-col space-y-2'>
+                    <div className='mt-5 flex flex-col-reverse space-y-2'>
                         {
                             data?.bursaryList.map((bursary: any, idx: number) => {
                                 return (
                                     <div key={idx}>
-                                        <DynamicCard
+                                        <Card
                                             bursaryName={bursary.name}
                                             closingDate={bursary.closing}
                                             applicationLink={bursary.applicationLink}

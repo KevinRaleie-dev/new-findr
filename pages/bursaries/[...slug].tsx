@@ -7,6 +7,9 @@ import useSwr from 'swr';
 import { Feed } from "../../components/Feed";
 import { Nav } from "../../components/Nav";
 
+import Lottie from 'react-lottie-player';
+import loading from '../../components/animations/loading.json'
+
 async function handler(month: string) {
     try {
         const url = process.env.NEXT_PUBLIC_SERVER_URL
@@ -47,9 +50,15 @@ const Bursary = ({ slug }: BursaryProps) => {
 
     if (!error && !data) {
         return (
-            <div className="mt-10 text-center">
-                <p>
-                    Fetching bursaries over the interwebs...
+            <div className="mt-10 flex flex-col items-center">
+                <Lottie
+                className=" w-36 h-36"
+                loop
+                animationData={loading}
+                play
+                />
+                <p className="text-2xl font-medium">
+                    Loading...
                 </p>
             </div>
         )
